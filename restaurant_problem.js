@@ -1,0 +1,11 @@
+var mealCost = 44.50;
+var taxOnMeal = mealCost * 0.0675;
+var tipOnMeal = 0.15;
+var mealCostWithTax = mealCost + taxOnMeal;
+var taxAmountOnMeal = mealCostWithTax - mealCost;
+var tipAmountOnMeal = tipOnMeal * (mealCost + taxAmountOnMeal);
+var totalBill = tipAmountOnMeal + mealCostWithTax;
+console.log("Meal cost: " + mealCost);
+console.log("Tax on meal: " + taxAmountOnMeal);
+console.log("Tip on meal: " + tipAmountOnMeal);
+console.log("Total bill: " + totalBill);
