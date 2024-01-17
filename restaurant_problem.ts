@@ -1,3 +1,5 @@
+export {};
+
 let mealCost:number=44.50;
 let taxOnMeal:number= mealCost * 0.0675;
 let tipOnMeal:number=0.15;

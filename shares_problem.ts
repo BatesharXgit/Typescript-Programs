@@ -8,4 +8,3 @@ let commsionAmount:number = (sharesBought * sharesPrice * 0.02);
 console.log("Total amount paid: " + totalAmountPaid);
 console.log("Commission amount: " + commsionAmount);
 console.log("Commission to pay: " + commisionToPay);
-
