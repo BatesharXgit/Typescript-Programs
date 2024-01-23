@@ -5,9 +5,12 @@ var prompt = promptSync();
 var string = prompt("Enter string: ");
 var str = prompt("Enter string: ");
 var count = 0;
-for (var i = 0; i < string.length; i++) {
-    if (string[i] == str) {
-        count += 1;
+function countOccurrence() {
+    for (var i = 0; i < string.length; i++) {
+        if (string[i] == str) {
+            count += 1;
+        }
     }
+    console.log(count);
 }
-console.log(count);
+countOccurrence();
