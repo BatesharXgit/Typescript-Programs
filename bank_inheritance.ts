@@ -36,31 +36,31 @@ class SBI extends Bank {
         super(0, 0);
     }
 
-    setDetails(): void {
-        console.log("Enter the details for SBI bank:");
-        super.setDetails();
+    getDetails(): void {
+        console.log('Enter the details for SBI bank: ');
+        super.getDetails();
     }
 }
 
 class PNB extends Bank {
     constructor() {
-        super(0, 0); 
+        super(0, 0);
     }
 
-    setDetails(): void {
-        console.log("Enter the details for PNB bank:");
-        super.setDetails();
+    getDetails(): void {
+        console.log('Enter the details for PNB bank: ');
+        super.getDetails();
     }
 }
 
 class HDFC extends Bank {
     constructor() {
-        super(0, 0); 
+        super(0, 0);
     }
 
-    setDetails(): void {
-        console.log("Enter the details for HDFC bank:");
-        super.setDetails();
+    getDetails(): void {
+        console.log('Enter the details for HDFC bank: ');
+        super.getDetails();
     }
 }
 

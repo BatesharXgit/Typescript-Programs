@@ -28,12 +28,12 @@ var Bank = /** @class */ (function () {
         var interest = this.depositAmount * this.interestRate;
         console.log("The interest is: ", interest);
     };
-    // setDetails(): void {
-    //     console.log("Enter the deposit amount: ");
-    //     this.depositAmount = parseInt(prompt());
-    //     console.log("Enter the interest rate: ");
-    //     this.interestRate = parseFloat(prompt());
-    // }
+    Bank.prototype.setDetails = function () {
+        console.log("Enter the deposit amount: ");
+        this.depositAmount = parseInt(prompt());
+        console.log("Enter the interest rate: ");
+        this.interestRate = parseFloat(prompt());
+    };
     Bank.prototype.getDetails = function () {
         console.log("The deposit amount is: ", this.depositAmount);
         console.log("The interest rate is: ", this.interestRate);
@@ -43,33 +43,45 @@ var Bank = /** @class */ (function () {
 var SBI = /** @class */ (function (_super) {
     __extends(SBI, _super);
     function SBI() {
-        return _super.call(this, 5000, 0.5) || this;
+        return _super.call(this, 0, 0) || this;
     }
+    SBI.prototype.getDetails = function () {
+        console.log('Enter the details for SBI bank: ');
+        _super.prototype.getDetails.call(this);
+    };
     return SBI;
 }(Bank));
 var PNB = /** @class */ (function (_super) {
     __extends(PNB, _super);
     function PNB() {
-        return _super.call(this, 5000, 0.4) || this;
+        return _super.call(this, 0, 0) || this;
     }
+    PNB.prototype.getDetails = function () {
+        console.log('Enter the details for PNB bank: ');
+        _super.prototype.getDetails.call(this);
+    };
     return PNB;
 }(Bank));
 var HDFC = /** @class */ (function (_super) {
     __extends(HDFC, _super);
     function HDFC() {
-        return _super.call(this, 5000, 0.3) || this;
+        return _super.call(this, 0, 0) || this;
     }
+    HDFC.prototype.getDetails = function () {
+        console.log('Enter the details for HDFC bank: ');
+        _super.prototype.getDetails.call(this);
+    };
     return HDFC;
 }(Bank));
 var bankSBI = new SBI();
-// bankSBI.setDetails();
+bankSBI.setDetails();
 bankSBI.calculateInterest();
 bankSBI.getDetails();
 var bankPNB = new PNB();
-// bankPNB.setDetails();
+bankPNB.setDetails();
 bankPNB.calculateInterest();
 bankPNB.getDetails();
 var bankHDFC = new HDFC();
-// bankHDFC.setDetails();
+bankHDFC.setDetails();
 bankHDFC.calculateInterest();
 bankHDFC.getDetails();
