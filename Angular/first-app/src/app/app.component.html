@@ -1,0 +1,74 @@
+<main>
+  <img
+    src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg"
+  />
+  <h1>Arithmetic Calculator</h1>
+
+  <div class="input-container">
+    <input
+      type="number"
+      [(ngModel)]="num1"
+      id="name"
+      name="name"
+      class="input-field"
+    /><br />
+    <input
+      type="number"
+      [(ngModel)]="num2"
+      placeholder="Amount"
+      id="name"
+      name="name"
+      class="input-field"
+    />
+    <button type="submit" (click)="arithmeticCalculator()" class="submit-btn">
+      Calculate
+    </button>
+  
+  </div>
+
+  <div>
+    <h5>The addition of num1 and numb2 is: </h5>
+    {{ addition }}
+    <h5>The substraction of num1 and numb2 is: </h5>
+    {{substraction}}
+    <h5>The multiplication of num1 and numb2 is: </h5>
+    {{multipication}}
+    <h5>The division of num1 and numb2 is: </h5>
+    {{division}}
+    
+  </div>
+</main>
+
+<style>
+  img {
+    width: fit-content;
+    height: 50px;
+  }
+
+  main {
+    display: grid;
+    place-items: center;
+    background-color: beige;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-field {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .submit-btn {
+    padding: 10px 20px;
+    background-color:black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
